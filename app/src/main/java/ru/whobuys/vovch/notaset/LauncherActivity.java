@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LauncherActivity extends AppCompatActivity {
 
@@ -13,7 +14,16 @@ public class LauncherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher_actitvity);
 
-        Button  oneFourButton = (Button) findViewById(R.id.no_network);
+        TextView  singleButton = (TextView) findViewById(R.id.singleplayer);
+        singleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LauncherActivity.this, SingleActivity.class);
+                LauncherActivity.this.startActivity(intent);
+            }
+        });
+
+        TextView  oneFourButton = (TextView) findViewById(R.id.four_players);
         oneFourButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,7 +32,7 @@ public class LauncherActivity extends AppCompatActivity {
             }
         });
 
-        Button multiplayerButton = (Button) findViewById(R.id.network);
+        TextView multiplayerButton = (TextView) findViewById(R.id.network);
         multiplayerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

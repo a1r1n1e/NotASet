@@ -5,9 +5,10 @@ import android.graphics.Canvas;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.Gravity;
-import android.widget.Button;
+import android.view.View;
+import android.widget.TextView;
 
-public class PlayerButton extends Button{
+public class PlayerButton extends TextView {
     final boolean topDown;
 
     public PlayerButton(Context context, AttributeSet attrs){

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MultiplayerActivity"
+    tools:context=".SingleActivity"
     android:background="@android:color/black">
     <TextView
         android:layout_width="match_parent"
@@ -13,6 +13,6 @@
         android:gravity="center"
         android:text="@string/coming_soon"
         android:textSize="30sp"
-        android:textColor="@android:color/holo_purple"/>
+        android:textColor="@android:color/holo_blue_light"/>
 
 </android.support.constraint.ConstraintLayout>
