@@ -6,4 +6,6 @@
     <string name="mode_multiplayer">Multiplayer</string>
     <string name="coming_soon">Coming Soon</string>
     <string name="mode_singleplayer">Singleplayer</string>
+    <string name="create_room">Create Room</string>
+    <string name="connect_to_room">Connect to existing one</string>
 </resources>

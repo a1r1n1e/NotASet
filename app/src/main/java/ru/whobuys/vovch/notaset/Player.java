@@ -1,7 +1,6 @@
 package ru.whobuys.vovch.notaset;
 
 import android.graphics.Color;
-import android.view.View;
 import android.widget.TextView;
 
 public class Player {
@@ -11,10 +10,19 @@ public class Player {
     private int score;
     private boolean isSpoiled;
 
-    public Player(int id){
+    static final int DEFAULT_ID = -100;
+    static final int DEFAULT_SCORE = 0;
+    static final boolean DEFAULT_SPOILED_STATE = false;
+
+    Player(){
+        this.id = DEFAULT_ID;
+        this.score = DEFAULT_SCORE;
+        this.isSpoiled = DEFAULT_SPOILED_STATE;
+    }
+    Player(int id){
         this.id = id;
-        this.score = 0;
-        this.isSpoiled = false;
+        this.score = DEFAULT_SCORE;
+        this.isSpoiled = DEFAULT_SPOILED_STATE;
     }
 
     public void setId(int id) {
@@ -25,11 +33,11 @@ public class Player {
         return id;
     }
 
-    public void setButton(PlayerButton button) {
+    void setButton(PlayerButton button) {
         this.button = button;
     }
 
-    public PlayerButton getButton() {
+    PlayerButton getButton() {
         return button;
     }
 
@@ -41,14 +49,14 @@ public class Player {
         this.score = score;
     }
 
-    public void increaseScore(){
+    void increaseScore(){
         this.score++;
         if(textView != null){
             textView.setText(String.valueOf(score));
         }
     }
 
-    public void decreaseScore(){
+    void decreaseScore(){
         this.score--;
         if(textView != null){
             textView.setText(String.valueOf(score));
@@ -80,17 +88,17 @@ public class Player {
         return textView;
     }
 
-    public void setTextView(TextView textView) {
+    void setTextView(TextView textView) {
         this.textView = textView;
     }
 
-    public boolean isSpoiled() {
+    boolean isSpoiled() {
         return isSpoiled;
     }
 
-    public void spoil() {
+    void spoil() {
         isSpoiled = true;
     }
 
-    public void clear(){ isSpoiled = false; }
+    void clear(){ isSpoiled = false; }
 }
